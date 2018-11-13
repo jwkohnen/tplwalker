@@ -29,7 +29,7 @@ type TemplateWalker interface {
 	IgnoreDir(dir ...string)
 }
 
-var _ TemplateWalker = new(TplWalker)
+var _ TemplateWalker = (*TplWalker)(nil)
 
 type TplWalker struct {
 	source     string
