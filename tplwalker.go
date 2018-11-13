@@ -37,7 +37,7 @@ type TplWalker struct {
 	suffix     string
 }
 
-func New(source, suffix string) (TemplateWalker, error) {
+func New(source, suffix string) (*TplWalker, error) {
 	t := &TplWalker{source: source, suffix: suffix}
 	err := t.walkerInit()
 	if err != nil {
