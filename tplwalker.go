@@ -46,7 +46,7 @@ func New(source, suffix string) (*TplWalker, error) {
 	return t, nil
 }
 
-func (t TplWalker) WalkTemplates(dst string, data interface{}) error {
+func (t *TplWalker) WalkTemplates(dst string, data interface{}) error {
 	return filepath.Walk(t.source, func(path string, stat os.FileInfo, walkErr error) error {
 		if walkErr != nil {
 			return walkErr
